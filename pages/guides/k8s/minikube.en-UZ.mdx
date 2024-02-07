@@ -3,12 +3,12 @@ import { Tabs } from 'nextra/components';
 
 # Minikube
 
-![k8s](/images/tutorials/k8s/minkube/3.jpg)
+![k8s](/images/tutorials/k8s/minikube/3.jpg)
 
 
 Minikube - bu local mashinangizda VM yaratadigan va faqat bitta nodeni o'z ichiga olgan oddiy clusterni o'rnatadigan yengil vaznli(lightweight) Kubernetes ilovasi. U Kubernetes bilan tajriba oʻtkazmoqchi boʻlgan yoki u bilan har kuni local kompyuterida ishlamoqchi boʻlgan dasturchilar uchun moʻljallangan. Minikube DNS, NodePorts, ConfigMaps va Secrets kabi Kubernetes xususiyatlarini qo'llab-quvvatlaydi, bu esa Kubernetesni local muhitda sinab ko'rish uchun mos keladi.
 
-![k8s](/images/tutorials/k8s/minkube/1.png)
+![k8s](/images/tutorials/k8s/minikube/1.png)
 
 ## 1. Minikubeni o'rnatish
 
@@ -141,7 +141,7 @@ minikube dashboard
 ```
 
 <Callout type="info" emoji="">
-Agar siz minkubeni serveringizga o'rnatgan bo'lsangiz minkube dashboardga tashqaridan kira olmaysiz yani faqat server o'zidan kirsa bo'ladi. minkube dashboardni tashqariga ochish uchun quyidagi `kubectl proxy` dan foydalaning
+Agar siz minikubeni serveringizga o'rnatgan bo'lsangiz minikube dashboardga tashqaridan kira olmaysiz yani faqat server o'zidan kirsa bo'ladi. minikube dashboardni tashqariga ochish uchun quyidagi `kubectl proxy` dan foydalaning
 ```bash
 kubectl proxy --address='0.0.0.0' --disable-filter=true
 ```
@@ -149,10 +149,10 @@ kubectl proxy --address='0.0.0.0' --disable-filter=true
 W0906 04:46:21.897067 1711012 proxy.go:177] Request filter disabled, your proxy is vulnerable to XSRF attacks, please be cautious
 Starting to serve on [::]:8001
 ```
-Hoizir sizda serveringiz IP addresida `8001` portda minkube dashboard ochiladi.
+Hoizir sizda serveringiz IP addresida `8001` portda minikube dashboard ochiladi.
 </Callout>
 
-![k8s](/images/tutorials/k8s/minkube/2.jpg)
+![k8s](/images/tutorials/k8s/minikube/2.jpg)
 
 ## 4.Apllicationlarni deploy qilish
 
@@ -183,7 +183,7 @@ Application chiqishida request metama'lumotlarini ko'rishingiz kerak. Requestnin
 
 ### Load Balancer (Yuk balanslagichi)
 
-LoadBalancer o'rnatilishiga kirish uchun `minkube tunnel` buyrug'idan foydalaning. Bu yerda deployment misoli:
+LoadBalancer o'rnatilishiga kirish uchun `minikube tunnel` buyrug'idan foydalaning. Bu yerda deployment misoli:
 
 ```bash
 kubectl create deployment balanced --image=kicbase/echo-server:1.0
